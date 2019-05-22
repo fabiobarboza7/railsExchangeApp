@@ -25,6 +25,7 @@ $(document).ready ->
           success: (data, text, jqXHR) ->
             $('#result').val data.value.toFixed(2) + ' ' + $('#target_currency').val()
         return false
+      return
     return
 
   $('#reverse').click ->
