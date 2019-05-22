@@ -20,7 +20,7 @@ $(document).ready ->
         error: (jqXHR, textStatus, errorThrown) ->
           alert textStatus
         success: (data, text, jqXHR) ->
-          $('#result').val data.value.toFixed(2)
+          $('#result').val data.value.toFixed(2) + " " + $('#target_currency').val()
       return false
     return
 
