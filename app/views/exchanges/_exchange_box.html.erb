@@ -15,6 +15,7 @@
  
           <div class='form-group'>
             <input type='number' name='amount' id='amount' class='form-control' placeholder='Quantidade ($10)' step='any' required>
+            <div id="reverse" class="btn btn-outline-danger d-block mt-1">Inverter</div>
           </div>
         </div>
                     
@@ -24,11 +25,8 @@
             <%= select_tag 'target_currency', options_for_select(currency_list, 'EUR'), class: 'form-control', id: 'target_currency'%>
           </div>
           <div class='form-group'>
-            <input type='text' id='result' name='result' class='form-control' placeholder='Resultado' readonly>
+            <input type='text' id='result' name='result' class='form-control border-success' placeholder='Resultado' readonly>
           </div>
-        </div>
-        <div>
-          <button type='submit' class='btn btn-primary btn-exchange col-md-12'>CONVERTER</button>
         </div>
       <% end %>
     </div>
