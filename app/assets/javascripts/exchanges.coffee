@@ -1,7 +1,11 @@
 $(document).ready ->
   runAjax = undefined
   timeoutID = undefined
+  runAjax = undefined
+  timeoutID = undefined
   $('#reverse').click ->
+    old_source = undefined
+    old_target = undefined
     old_source = undefined
     old_target = undefined
     old_source = $('#source_currency').val()
@@ -23,7 +27,7 @@ $(document).ready ->
           error: (jqXHR, textStatus, errorThrown) ->
             alert textStatus
           success: (data, text, jqXHR) ->
-            $('#result').val data.value.toFixed(2) + ' ' + $('#target_currency').val()
+            $('#result').val data.value.toFixed(2)
         return false
       return
     return
